@@ -1,8 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const links = [
-        "https://example1.com",
-        "https://example2.com",
-        "https://example3.com",
+        "https://glos.onlinesurveys.ac.uk/unmasking-the-impact-exploring-the-relationship-between-c",
+        "https://glos.onlinesurveys.ac.uk/unmasking-the-impact-exploring-the-relationship-between-c-2",
         // Add more links as needed
     ];
 
