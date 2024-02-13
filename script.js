@@ -5,12 +5,10 @@ document.addEventListener("DOMContentLoaded", function() {
         // Add more links as needed
     ];
 
-    const generateLinkButton = document.getElementById("generateLink");
     const linkContainer = document.getElementById("linkContainer");
 
-    generateLinkButton.addEventListener("click", function() {
-        const randomIndex = Math.floor(Math.random() * links.length);
-        const randomLink = links[randomIndex];
-        linkContainer.innerHTML = `<p><a href="${randomLink}" target="_blank">${randomLink}</a></p>`;
-    });
+    // Generate a random link upon page load
+    const randomIndex = Math.floor(Math.random() * links.length);
+    const randomLink = links[randomIndex];
+    linkContainer.innerHTML = `<p><a href="${randomLink}" target="_blank">${randomLink}</a></p>`;
 });
