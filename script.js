@@ -14,9 +14,11 @@ document.addEventListener("DOMContentLoaded", function() {
             const randomLink = links.splice(randomIndex, 1)[0];
             linkContainer.innerHTML = `<p><a href="${randomLink}" target="_blank">${randomLink}</a></p>`;
             generateLinkButton.disabled = true;
+            generateLinkButton.style.display = "none";
         } else {
             linkContainer.innerHTML = "<p>No more links available</p>";
             generateLinkButton.disabled = true;
+            generateLinkButton.style.display = "none";
         }
     });
 });
