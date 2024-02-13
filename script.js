@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const randomIndex = Math.floor(Math.random() * links.length);
             const randomLink = links.splice(randomIndex, 1)[0];
             linkContainer.innerHTML = `<p><a href="${randomLink}" target="_blank">${randomLink}</a></p>`;
+            generateLinkButton.disabled = true;
         } else {
             linkContainer.innerHTML = "<p>No more links available</p>";
             generateLinkButton.disabled = true;
