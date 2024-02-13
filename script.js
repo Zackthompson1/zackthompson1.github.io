@@ -5,10 +5,17 @@ document.addEventListener("DOMContentLoaded", function() {
         // Add more links as needed
     ];
 
+    const generateLinkButton = document.getElementById("generateLink");
     const linkContainer = document.getElementById("linkContainer");
 
-    // Generate a random link upon page load
-    const randomIndex = Math.floor(Math.random() * links.length);
-    const randomLink = links[randomIndex];
-    linkContainer.innerHTML = `<p><a href="${randomLink}" target="_blank">${randomLink}</a></p>`;
+    generateLinkButton.addEventListener("click", function() {
+        if (links.length > 0) {
+            const randomIndex = Math.floor(Math.random() * links.length);
+            const randomLink = links.splice(randomIndex, 1)[0];
+            linkContainer.innerHTML = `<p><a href="${randomLink}" target="_blank">${randomLink}</a></p>`;
+        } else {
+            linkContainer.innerHTML = "<p>No more links available</p>";
+            generateLinkButton.disabled = true;
+        }
+    });
 });
